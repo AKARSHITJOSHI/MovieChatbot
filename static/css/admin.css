@@ -1,0 +1,89 @@
+
+.navbar-brand
+{
+  font-family: 'Lato', sans-serif;
+  
+    font-size: 23px !important; 
+  margin: 0px;
+}
+.nav,.navbar-nav li a
+{  
+   font-size: 21px !important; 
+   margin-left:2px;
+   margin-right:24px;
+   padding:2px -2px;
+}
+html,body{
+  min-height:100vh;
+  min-width: 100vw;
+}
+
+
+
+
+
+#img1{
+   position:relative;
+  
+    background:no-repeat center center;
+    background-size:cover;
+    transition:8s ease-out;
+    height:100vh;
+
+  }
+  
+  #f1{
+    position:absolute;
+    display:none;
+    margin-top:20vh;
+    margin-left:30vw;
+  
+  }
+  
+  #f2{
+    position:absolute;
+    display:none;
+    margin-top:20vh;
+   margin-left:30vw;
+   
+  }
+  #f3{
+    position:absolute;
+    display:none;
+    margin-top:20vh;
+   margin-left:30vw;
+   
+  }
+  
+  #f1 #elem{
+  width:70vw !important;
+  }  
+  .form-group .form-inline input{
+    margin-left:1.8vw !important;
+    width:10vw !important;
+  }
+  .form-group .form-inline select{
+    width:11vw !important;
+  }
+  .form-group label{
+    margin-right:7vw !important;
+  }
+  .form-check-inline label{
+    margin-top:1vh !important;
+    margin-right:1vw !important;
+
+
+  }
+  #f3,#f2 {
+    width:30vw !important;
+
+  }
+  button{
+    width:30vw !important;
+    margin-top:0.5vh !important;
+  
+  
+  }
+
+  
+  

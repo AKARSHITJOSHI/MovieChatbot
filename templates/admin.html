@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>chatbot</title>
+    <link href="{{url_for('static',filename='css/admin.css')}}" rel="stylesheet" />
+
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shrtcut icon" type="image/ico" href="url_for('static',filename='favicon.ico')">
+
+
+    <style>
+    
+    </style>
+    <script type="text/javascript">
+        var index = 7;
+        function slider() {
+            var ch = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+
+
+            document.getElementById("img1").style.backgroundImage = "url(../static/images/" + ch[index] + ".jpg)";
+            index++;
+            if (index == ch.length) index = 0;
+
+
+            setInterval('slider();', 16000);
+
+        }
+        function show(a) {
+            if (a == 1) {
+                document.getElementById("f1").style.display = 'block';
+                document.getElementById("f2").style.display = 'none';
+                document.getElementById("f3").style.display = 'none';
+            }
+            if (a == 2) {
+                document.getElementById("f1").style.display = 'none';
+                document.getElementById("f2").style.display = 'block';
+                document.getElementById("f3").style.display = 'none';
+            }
+            if(a == 3){
+                document.getElementById("f1").style.display = 'none';
+                document.getElementById("f2").style.display = 'none';
+                document.getElementById("f3").style.display = 'block';
+            }
+            
+
+        }
+       
+
+
+
+           
+    </script>
+
+    
+    
+    
+   
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-right fixed-top bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static',filename='clogo.jpeg')}}" width="30" height="30" alt="" />
+                ChatBot
+            </a>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="list-inline-item font-weight-normal"><a onclick="show(1)"href="#">Add Movie</a></li>
+                    <li class="list-inline-item"><a onclick="show(2)" href="#">Update Movie InFo</a></li>
+                    <li class="list-inline-item"><a onclick="show(3)" href="#">Delete Movie</a></li>
+                    <li class="list-inline-item"><a href="{{url_for('logout')}}">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+ <div id="img1">
+    <form action="{{url_for('admin')}}" id="f1" class="form-horizontal" method="POST">
+        <div id="elem">
+            <label>Movie Name</label>
+            <input type="text" class="form-control w-50" name="mname" required />
+            <label>Movie Cast</label>
+            <input type="text" class="form-control w-50" name="mcast" required/>
+            <label>Director Name</label>
+            <input type="text" class="form-control w-50" name="dname" required/>
+        </div>
+       
+        <div class="form-group">
+            <label>Release year</label>
+            <label>Run Time</label>
+            <label>Revenue</label>
+            <div class="form-inline">
+    
+                <select id="s1" class="form-control" name="year">
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                </select>
+                <input type="text" id="rt" class="form-control" name="runtime">
+    
+                <input type="text" id="rv" class="form-control" name="revenue">
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    Genre
+                </label>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="action">action
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="drama">drama
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="thriller">thriller
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="thriller">horror
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="thriller">biography
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="thriller">comedy
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="genre" class="form-check-input" value="thriller">romantic
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" class="form-control w-25" name="rating">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send</button>
+                <input type="hidden" name="form" value="1">
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+    <form action="{{url_for('admin')}}" id="f2" class="form-horizontal" method="POST">
+            <div class="form-group">
+                <label>Enter movie name</label>
+                <input type="text" class="form-control" name="mname">
+            </div>
+            <div class="form-group">
+                <label>Enter year</label>
+                <input type="text" class="form-control" placeholder="optional...." name="year">
+            </div>
+            
+            <div class="form-group">
+                
+                <select id="s1" class="form-control" name="s2">
+                    <option disabled selected>Select What you want to update</option>
+                    <option>Genre</option>
+                    
+                    <option>Rating</option>
+                    <option>Revenue</option>
+                    <option>Cast</option>
+                    <option>Director Name</option>
+                    <option>Runtime</option>
+                </select>
+            </div>
+
+           <input type="text" class="form-control" name="mfy" placeholder="use (,) as a seperator for multiple values">
+        
+            <input type="hidden" value="2" name="form">
+
+            <button type="submit" class="btn btn-primary">Send</button>
+        
+        
+        
+     </form>
+     <form action="{{url_for('admin')}}" id="f3" class="form-horizontal" method="POST">
+         <div class="form-group">
+            <label>Enter movie name</label>
+            <input type="text" class="form-control" name="mname">
+         </div>
+        <div class="form-group">
+            <label>Enter year</label>
+            <input type="text" class="form-control" placeholder="optional...." name="year">
+        </div>
+        <div class="form-group">
+            <input type="hidden" value="3" name="form">
+            <button type="submit" class="btn btn-primary">Send</button>
+            
+        </div>
+
+         
+     </form>
+  </div>
+   {% if sc%}
+   <script>
+    var status='{{sc}}'
+    var id='{{val}}'
+     alert(status);
+     document.getElementById(id).style.display='block';
+   </script>
+
+   {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>chatbot</title>
+      <link href="{{url_for('static',filename='css/chat.css')}}" rel="stylesheet" />
+
+
+    </head>
+    <body>
+        <p class="reply">How may I help you!</p>
+         
+<p class="qtext">movies released 2012</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>prometheus</td></tr><tr><td>the avengers</td></tr><tr><td>the dark knight rises</td></tr><tr><td>the place beyond the pines</td></tr><tr><td>django unchained</td></tr><tr><td>the hunger games</td></tr><tr><td>spring breakers</td></tr><tr><td>the perks of being a wallflower</td></tr><tr><td>les misrables</td></tr><tr><td>battleship</td></tr><tr><td>cloud atlas</td></tr><tr><td>skyfall</td></tr><tr><td>the hobbit: an unexpected journey</td></tr><tr><td>21 jump street</td></tr><tr><td>pitch perfect</td></tr></table></p>
+<p class="qtext">cast of  spring and rating of  battleship</p>
+<p class="reply"><table><tr><th>rating</th><th>cast</th><th>movie</th></tr><tr><td>5.3</td><td>vanessa hudgens<br> selena gomez<br> ashley benson<br>rachel korine</td><td>spring breakers</td></tr><tr><td>5.8</td><td>alexander skarsgrd<br> brooklyn decker<br> liam neeson<br>rihanna</td><td>battleship</td></tr></table></p>
+<p class="qtext">movies starring jack and ryan</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>goosebumps</td></tr><tr><td>jack ryan: shadow recruit</td></tr></table></p>
+<p class="qtext">movies starring jack and ryan</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>goosebumps</td></tr><tr><td>jack ryan: shadow recruit</td></tr></table></p>
+<p class="qtext">movies starring jack and ryan</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>goosebumps</td></tr><tr><td>jack ryan: shadow recruit</td></tr></table></p>
+<p class="qtext">movies starring jack and ryan</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>goosebumps</td></tr><tr><td>jack ryan: shadow recruit</td></tr></table></p>
+<p class="qtext">movies starring jack and ryan</p>
+<p class="reply"><table><tr><th>movie</th></tr><tr><td>goosebumps</td></tr><tr><td>jack ryan: shadow recruit</td></tr></table></p>
+<p class="qtext">goosebumps</p>
+<div id="Last"><p class="reply"><table><tr><th>movie</th><th>year</th><th>genre</th><th>cast</th><th>rating</th><th>director</th><th>runtime</th><th>revenue</th></tr><tr><td>goosebumps</td><td>2015</td><td>adventure<br>comedy<br>family</td><td>jack black<br> dylan minnette<br> odeya rush<br> ryan lee</td><td>6.3</td><td>rob letterman</td><td>103</td><td>80.02</td></tr></table></p></div>
+      
+
+         <form action="{{url_for('chat')}}" class="f1" method="POST">
+         <input type="text" class="iform" placeholder="Enter Your Query here" name="query">
+         <button type="submit" class="bform">Send</button>
+      
+      
+      
+      </form>
+    
+<div id="last">
+  {% if scroll %}
+  <script>
+    document.location.hash = '#' + "Last";
+  </script>
+  {% endif %}
+</div>
+
+</body>
+  </html>

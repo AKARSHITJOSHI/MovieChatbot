@@ -1,0 +1,80 @@
+
+.f1{
+  padding:0.2vw;
+}
+.reply{
+color:white;
+border-radius:8%;
+
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:16px;
+margin-top:40px;
+text-align:left;
+margin-left:3%;
+padding:3%;
+padding-left:6%;
+padding-right:2%;
+width:fit-content;
+margin-bottom: 6vh;
+ background-color:rgba(0, 0, 0, 0.596);
+  
+}
+
+.qtext{
+padding-top:2%;
+
+color:white;
+border-radius:5%;
+width:50%;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:17px;
+margin-left:45%;
+text-align:center;
+padding:1.3%;
+margin-top:2vh;
+background-color:rgba(29, 153, 211, 0.555);
+ 
+
+}
+.iform{
+position:fixed;
+width:86.5vw;
+height:7.5vh;
+border-bottom-right-radius: 1vh;
+left:0;
+bottom:0;
+padding:1vw;
+
+border: 1px solid #ccc;
+ }
+ 
+.bform{
+ position:fixed;
+ bottom:0;
+ right:0;
+    color:white;
+    margin-left:77vw;
+    
+width:14vw;
+
+height:7.5vh;
+border-bottom-right-radius: 1vh;
+background-color: rgba(23, 41, 145);
+}
+table {
+  width: 100%;
+  text-align:center;
+  color:white;
+  height:4vh;
+  border-spacing: 1vw 3vh;
+  font-size:2.1vh;
+   overflow-x:auto;
+}
+
+
+th{
+  border-bottom:1px dashed #ddd;
+  color:white;
+}
+
+

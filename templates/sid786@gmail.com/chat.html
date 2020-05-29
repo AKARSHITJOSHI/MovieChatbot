@@ -1,0 +1,45 @@
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>chatbot</title>
+      <link href="{{url_for('static',filename='css/chat.css')}}" rel="stylesheet" />
+
+
+    </head>
+    <body>
+        <p class="reply">How may I help you!</p>
+         
+<p class="qtext">find movie actor of split and prometheus</p>
+<p class="reply">moviename:actor of split and prometheus not found</p>
+<p class="qtext">movie actor of split</p>
+<p class="reply">moviename:actor of split not found</p>
+<p class="qtext">find actor of split</p>
+<p class="reply">sorry i didnt get you :(</p>
+<p class="qtext">find cast of split</p>
+<p class="reply"> james mcavoy<br> anya taylor-joy<br> haley lu richardson<br> jessica sula</p>
+<p class="qtext">movie j</p>
+<p class="reply"><table><tr><th>movie</th><th>genre</th><th>cast</th><th>rating</th><th>director</th><th>runtime</th><th>revenue</th></tr><tr><td>jason bourne</td><td>action<br>thriller</td><td>matt damon<br> tommy lee jones<br> alicia vikander<br>vincent cassel</td><td>6.7</td><td>paul greengrass</td><td>123</td><td>162.16m</td></tr><tr><td>john wick</td><td>action<br>crime<br>thriller</td><td>keanu reeves<br> michael nyqvist<br> alfie allen<br> willem dafoe</td><td>7.2</td><td>chad stahelski</td><td>101</td><td>43</td></tr><tr><td>batman v superman: dawn of justice</td><td>action<br>adventure<br>sci-fi</td><td>ben affleck<br> henry cavill<br> amy adams<br> jesse eisenberg</td><td>6.7</td><td>zack snyder</td><td>151</td><td>330.25</td></tr><tr><td>the autopsy of jane doe</td><td>horror<br>mystery<br>thriller</td><td>brian cox<br> emile hirsch<br> ophelia lovibond<br> michael mcelhatton</td><td>6.8</td><td>andr vredal</td><td>86</td><td>0</td></tr><tr><td>jurassic world</td><td>action<br>adventure<br>sci-fi</td><td>chris pratt<br> bryce dallas howard<br> ty simpkins<br>judy greer</td><td>7.0</td><td>colin trevorrow</td><td>124</td><td>652.18</td></tr><tr><td>the jungle book</td><td>adventure<br>drama<br>family</td><td>neel sethi<br> bill murray<br> ben kingsley<br> idris elba</td><td>7.5</td><td>jon favreau</td><td>106</td><td>364</td></tr><tr><td>jack reacher: never go back</td><td>action<br>adventure<br>crime</td><td>tom cruise<br> cobie smulders<br> aldis hodge<br> robert knepper</td><td>6.1</td><td>edward zwick</td><td>118</td><td>58.4</td></tr><tr><td>bridget jones's baby</td><td>comedy<br>romance</td><td>rene zellweger<br> gemma jones<br> jim broadbent<br>sally phillips</td><td>6.7</td><td>sharon maguire</td><td>118</td><td>24.09</td></tr><tr><td>jackie</td><td>biography<br>drama<br>history</td><td>natalie portman<br> peter sarsgaard<br> greta gerwig<br>billy crudup</td><td>6.8</td><td>pablo larran</td><td>100</td><td>13.96</td></tr><tr><td>percy jackson & the olympians: the lightning thief</td><td>adventure<br>family<br>fantasy</td><td>logan lerman<br> kevin mckidd<br> steve coogan<br>brandon t. jackson</td><td>5.9</td><td>chris columbus</td><td>118</td><td>88.76</td></tr><tr><td>the hobbit: an unexpected journey</td><td>adventure<br>fantasy</td><td>martin freeman<br> ian mckellen<br> richard armitage<br>andy serkis</td><td>7.9</td><td>peter jackson</td><td>169</td><td>303</td></tr><tr><td>21 jump street</td><td>action<br>comedy<br>crime</td><td>jonah hill<br> channing tatum<br> ice cube<br>brie larson</td><td>7.2</td><td>phil lord</td><td>110</td><td>138.45m</td></tr><tr><td>22 jump street</td><td>action<br>comedy<br>crime</td><td>channing tatum<br> jonah hill<br> ice cube<br>nick offerman</td><td>7.1</td><td>phil lord</td><td>112</td><td>191.62m</td></tr><tr><td>keeping up with the joneses</td><td>action<br>comedy</td><td>zach galifianakis<br> isla fisher<br> jon hamm<br> gal gadot</td><td>5.8</td><td>greg mottola</td><td>105</td><td>14.9</td></tr><tr><td>jupiter ascending</td><td>action<br>adventure<br>sci-fi</td><td>channing tatum<br> mila kunis<br>eddie redmayne<br> sean bean</td><td>5.3</td><td>lana wachowski</td><td>127</td><td>47.38</td></tr></table></p>
+<p class="qtext">find actor of split</p>
+<div id="Last"><p class="reply">sorry i didnt get you :(</p></div>
+      
+
+         <form action="{{url_for('chatbox')}}" class="f1" method="POST">
+         <input type="text" class="iform" placeholder="Enter Your Query here" name="query">
+         <button type="submit" class="bform">Send</button>
+      
+      
+      
+      </form>
+    
+<div id="last">
+  {% if scroll %}
+  <script>
+    document.location.hash = '#' + "Last";
+  </script>
+  {% endif %}
+</div>
+
+</body>
+  </html>

@@ -1,0 +1,33 @@
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>chatbot</title>
+      <link href="{{url_for('static',filename='css/chat.css')}}" rel="stylesheet" />
+
+
+    </head>
+    <body>
+        <p class="reply">How may I help you!</p>
+         <div id="Last"></div>
+      
+
+         <form action="{{url_for('chatbox')}}" class="f1" method="POST">
+         <input type="text" class="iform" placeholder="Enter Your Query here" name="query">
+         <button type="submit" class="bform">Send</button>
+      
+      
+      
+      </form>
+    
+<div id="last">
+  {% if scroll %}
+  <script>
+    document.location.hash = '#' + "Last";
+  </script>
+  {% endif %}
+</div>
+
+</body>
+  </html>

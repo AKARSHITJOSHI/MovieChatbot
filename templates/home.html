@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>chatbot</title>
+    <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet" />
+
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shrtcut icon" type="image/ico" href="url_for('static',filename='favicon.ico')">
+
+
+    <style>
+        .cbox {
+            position: absolute;
+            right: 0;
+        
+        }
+    </style>
+    <script type="text/javascript">
+        var index = Math.floor(Math.random() * 11);
+        function slider() {
+            var ch = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j", "k","l","m"];
+            
+
+            document.getElementById("img1").style.backgroundImage = "url(../static/images/" + ch[index] + ".jpg)";
+            index++;
+            if (index == ch.length) index = 0;
+           
+
+            
+
+        }
+        
+
+        function show() {
+            document.getElementById("chatcontent").style.visibility = "visible";
+
+        }
+
+        function stop() {
+             window.clearInterval(a);
+        }
+        
+         var a = window.setInterval('slider();', 12000);
+    </script>
+
+</head>
+
+<body onload="slider()" onunload="stop()">
+    <nav class="navbar navbar-expand-sm navbar-right fixed-top bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static',filename='clogo.jpeg')}}" width="30" height="30" alt="" /> ChatBot
+            </a>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="list-inline-item font-weight-normal"><a href="http://localhost:7860/trylogin">Login</a></li>
+                    <li class="list-inline-item"><a onclick="show()" href="#">Chat</a></li>
+                    <li class="list-inline-item"><a href="{{url_for('about')}}">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+    <div id="img1">
+        <div class="cbox">
+            <iframe src="{{url_for('chat')}}" id="chatcontent"></iframe>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
